@@ -170,6 +170,11 @@ namespace Calculator
                 txtNumber.Text = txtNumber.Text + ".";
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtNumber.Text = "0";
+        }
+
         private void btnZero_Click(object sender, EventArgs e)
         {
             if (txtNumber.Text == "0")
