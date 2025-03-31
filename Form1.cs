@@ -158,6 +158,18 @@ namespace Calculator
             operators = -1;
         }
 
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            //if (txtNumber.Text.Contains(".") == fales)
+            //{
+            //    txtNumber.Text = txtNumber.Text + ".";
+            //}
+
+            // 確認輸入文字框中完全沒有小數點
+            if (txtNumber.Text.IndexOf(".") == -1)
+                txtNumber.Text = txtNumber.Text + ".";
+        }
+
         private void btnZero_Click(object sender, EventArgs e)
         {
             if (txtNumber.Text == "0")
