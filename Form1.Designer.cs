@@ -243,6 +243,7 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(649, 61);
             this.txtNumber.TabIndex = 17;
+            this.txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 

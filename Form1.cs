@@ -21,70 +21,65 @@ namespace Calculator
         float firstNumber, secondNumber; // firstNumber 儲存第一個數字，secondNumber 儲存第二個數字
         int operators = -1; // 記錄選擇哪一種運算符號？0:加、1:減、2:乘、3:除、-1:重新設定
 
-        private void btnOne_Click(object sender, EventArgs e)
+        private void Add_Number(string _number)
         {
             if (txtNumber.Text == "0")
-            {
-                txtNumber.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
-            }
-            //txtNumber.Text = txtNumber.Text + "1";
-            txtNumber.Text += "1"; // 上面和下面的寫法意思是一樣的
+                txtNumber.Text = "";
+            txtNumber.Text = txtNumber.Text + _number;
+        }
+
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+            Add_Number("1"); // 只需要呼叫Add_Number函式，並且設定參數為數字1
+            //if (txtNumber.Text == "0")
+            //{
+                //txtNumber.Text = ""; //這個簡單的判斷式，會預先檢查輸入文字框是不是只有一個「0」？是的話，就先清除掉裡面的數字內容
+            //}
+            //txtNumber.Text += "1"; 
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0") // 如果你的判斷式簡單到只有一行程式，可以把 { } 大刮號省略掉
-                txtNumber.Text = "";
-            txtNumber.Text += "2";
+            Add_Number("2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "3";
+            Add_Number("3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "4";
+            Add_Number("4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "5";
+            Add_Number("5");
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "6";
+            Add_Number("6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "7";
+            Add_Number("7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "8";
+            Add_Number("8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "9";
+            Add_Number("9");
+        }
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+            Add_Number("0");
         }
 
         // 按下選擇「加」按鍵
@@ -173,13 +168,6 @@ namespace Calculator
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtNumber.Text = "0";
-        }
-
-        private void btnZero_Click(object sender, EventArgs e)
-        {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = "";
-            txtNumber.Text += "0";
         }
     }
 }
