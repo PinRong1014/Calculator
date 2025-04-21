@@ -46,6 +46,8 @@
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtNumber = new System.Windows.Forms.TextBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnPct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClear
@@ -245,11 +247,35 @@
             this.txtNumber.TabIndex = 17;
             this.txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnDel
+            // 
+            this.btnDel.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDel.Location = new System.Drawing.Point(12, 182);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(125, 62);
+            this.btnDel.TabIndex = 18;
+            this.btnDel.Text = "⌫";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnPct
+            // 
+            this.btnPct.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPct.Location = new System.Drawing.Point(12, 318);
+            this.btnPct.Name = "btnPct";
+            this.btnPct.Size = new System.Drawing.Size(125, 62);
+            this.btnPct.TabIndex = 19;
+            this.btnPct.Text = "%";
+            this.btnPct.UseVisualStyleBackColor = true;
+            this.btnPct.Click += new System.EventHandler(this.btnPct_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 393);
+            this.Controls.Add(this.btnPct);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEqual);
@@ -295,6 +321,8 @@
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnPct;
     }
 }
 

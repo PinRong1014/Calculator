@@ -166,6 +166,25 @@ namespace Calculator
                 txtNumber.Text = txtNumber.Text + ".";
         }
 
+        private void btnPct_Click(object sender, EventArgs e)
+        {
+            float number = Convert.ToSingle(txtNumber.Text);
+            number = number / 100f; // 直接除以100
+            txtNumber.Text = number.ToString();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (txtNumber.Text.Length > 1)
+            {
+                txtNumber.Text = txtNumber.Text.Substring(0, txtNumber.Text.Length - 1); // 刪掉最後一個字元
+            }
+            else
+            {
+                txtNumber.Text = "0"; // 若只剩一個字元，直接顯示為 0
+            }
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtNumber.Text = "0";
